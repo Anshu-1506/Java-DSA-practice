@@ -107,19 +107,3 @@ public class functionquestions {
     //     System.out.println("The answer is : " +printPower(x, n));
     // }
 
-    static void countType(){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number");
-        int n=sc.nextInt();
-        int countp, countn, countz=0;
-        if(n>0){
-            countp++;
-        }
-        else if(n<0){
-            countn++;
-        }
-        else{
-            countz++;
-        }
-    }
-}
