@@ -107,14 +107,35 @@
 
     //count how many times a given element occurs
 
-    int[] arr = {10,20,10,30,10,40};
-    int target=10;
-    int count = 0;
-    for(int i=0;i<arr.length;i++){
-        if(arr[i]==target){
-            count++;
+//     int[] arr = {10,20,10,30,10,40};
+//     int target=10;
+//     int count = 0;
+//     for(int i=0;i<arr.length;i++){
+//         if(arr[i]==target){
+//             count++;
+//         }
+//     }
+//    System.out.println(count);
+
+     //Find the second largest element
+
+      int[] arr = {10,50,20,80,30};
+      int largest = Integer.MIN_VALUE;
+      int secondLargest = Integer.MIN_VALUE;
+
+      for(int i=0;i<arr.length;i++){
+        if(arr[i]>largest){
+            secondLargest=largest;
+            largest=arr[i];
+            
         }
-    }
-   System.out.println(count);
+        else if(arr[i]>secondLargest && arr[i]!=largest){
+            secondLargest=arr[i];
+        }
+      }
+    System.out.println("Second Largest Element is : "+secondLargest);
    }
 }
+
+    
+   
