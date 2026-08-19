@@ -107,39 +107,65 @@ public class twoPointers {
 
     //Merge two sorted arrays
 
-    int[] arr1={1,4,7,10};
-    int[] arr2={2,3,6,8,9};
+    // int[] arr1={1,4,7,10};
+    // int[] arr2={2,3,6,8,9};
 
-    int i=0;
-    int j=0;
-    int[] result = new int[arr1.length+arr2.length];
-    int k=0;
+    // int i=0;
+    // int j=0;
+    // int[] result = new int[arr1.length+arr2.length];
+    // int k=0;
 
-    while(i<arr1.length && j<arr2.length){
-        if(arr1[i]<arr2[j]){
-            result[k]=arr1[i];
+    // while(i<arr1.length && j<arr2.length){
+    //     if(arr1[i]<arr2[j]){
+    //         result[k]=arr1[i];
+    //         i++;
+    //     }
+    //     else{
+    //         result[k]=arr2[j];
+    //         j++;
+    //     }
+    // k++;
+    // }
+    // while(i<arr1.length){
+    //     result[k]=arr1[i];
+    //     i++;
+    //     k++;
+    // }
+    // while(j<arr2.length){
+    //     result[k]=arr2[j];
+    //     j++;
+    //     k++;
+    // }
+    // for(int m=0;m<result.length;m++){
+    //     System.out.print(result[m]+" ");
+    // }
+
+
+    //Find triplets with given sum
+
+    int[] arr ={1,2,3,4,5,6,8};
+    int target = 13;
+    for(int fixed=0;fixed<arr.length;fixed++){
+        int i = fixed + 1;
+        int j = arr.length - 1;
+    while(i<j){
+        if(arr[fixed]+arr[i]+arr[j]==target){
+            System.out.print(arr[fixed]+" "+arr[i]+" "+arr[j]);
+            System.out.println();
+            break;
+            
+        }
+        else if(arr[fixed]+arr[i]+arr[j]<target){
             i++;
         }
         else{
-            result[k]=arr2[j];
-            j++;
+            j--;
         }
-    k++;
-    }
-    while(i<arr1.length){
-        result[k]=arr1[i];
-        i++;
-        k++;
-    }
-    while(j<arr2.length){
-        result[k]=arr2[j];
-        j++;
-        k++;
-    }
-    for(int m=0;m<result.length;m++){
-        System.out.print(result[m]+" ");
-    }
     }
     
+}
 
+}
+    
+   
 }
