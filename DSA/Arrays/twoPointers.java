@@ -67,24 +67,42 @@ public class twoPointers {
 
    // Move all zeroes to end
 
-   int[] arr = {0,1,0,3,12};
-   int left = 0;
-   int right = 1;
-   while(right<arr.length){
-    if (arr[left]==0&&arr[right]!=0) {
-        int temp = arr[left];
-        arr[left]=arr[right];
-        arr[right]=temp;  
-        left++;
+//    int[] arr = {0,1,0,3,12};
+//    int left = 0;
+//    int right = 1;
+//    while(right<arr.length){
+//     if (arr[left]==0&&arr[right]!=0) {
+//         int temp = arr[left];
+//         arr[left]=arr[right];
+//         arr[right]=temp;  
+//         left++;
+        
+//     }
+//      {
+//         right++;
+    
+//     }
+//    }
+//    for(int i=0;i<arr.length;i++)
+//    System.out.print(" "+arr[i]);
+    
+
+     //Remove duplicate elements iarray from the sorted array
+    int[] arr = {1,1,2,3,3,4,5,5};
+    int i = 0;
+    
+    for(int j=1;j<arr.length;j++){
+        if(arr[i]!=arr[j]){
+            i++;
+            arr[i]=arr[j];
+        }
         
     }
-     {
-        right++;
-    
+    int uniquecount = i+1;
+
+    for(int k=0;k<uniquecount;k++){
+        System.out.print(arr[k]+" ");
     }
-   }
-   for(int i=0;i<arr.length;i++)
-   System.out.print(" "+arr[i]);
     }
     
 
