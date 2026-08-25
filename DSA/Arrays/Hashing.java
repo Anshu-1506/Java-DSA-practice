@@ -57,6 +57,24 @@ public class Hashing{
     // }
     // System.out.println(map);
 
-    
+    //Find common elements in two arrays:-
+
+    int[] arr1={1,2,4,5,7};
+    int[] arr2={2,3,5,6,7};
+
+    HashMap<Integer, Integer>map = new HashMap<>();
+
+   //store elements of first array
+    for(int i=0;i<arr1.length;i++){
+        map.put(arr1[i], 1);
+    }
+
+    //check second array
+     for(int i=0;i<arr2.length;i++){
+        if(map.containsKey(arr2[i])){
+           System.out.println(arr2[i]);
+           map.put(arr2[i], 0);
+        }
+     }
     }
 }
